@@ -3,9 +3,18 @@ package ss4_object_class;
 public class Student {
 
     // khai báo thuộc tính, biến của đối tượng ( instance), biến toàn cục (global)
-    int id;
-    String name;
-    float score;
+    private int id;
+    public String name;
+    private float score;
+
+    public static String school;
+
+    static {
+        System.out.println("gán giá trị cho biến satic");
+        // xử lý phức tạp
+        school = "BK";
+        // khối static để thay đổi hoặc khởi tạo giá trị ban đầu cho biến static
+    }
 
     public Student() {
     }
@@ -45,9 +54,9 @@ public class Student {
         this.score = score;
     }
 
+    public String toString() {
+        return "id : " + this.id + "- name: " + this.name
+                + "-score: " + this.score + "- school: " + school;
+    }
 
-
-   public String toString(){
-        return "id : "+ this.id +"- name: "+ this.name + "-score: "+ this.score;
-   }
 }

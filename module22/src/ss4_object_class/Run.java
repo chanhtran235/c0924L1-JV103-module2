@@ -3,6 +3,7 @@ package ss4_object_class;
 import java.util.Scanner;
 
 public class Run {
+
     public static void main(String[] args) {
 
         Student[] students = new Student[10];
@@ -51,6 +52,7 @@ public class Run {
                 case 4:
                     System.out.println("-------- Kết thúc----------------------");
                     System.exit(0);
+                  long endTime =  System.currentTimeMillis();
             }
         }
     }
