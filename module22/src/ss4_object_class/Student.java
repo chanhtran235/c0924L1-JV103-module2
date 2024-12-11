@@ -1,16 +1,20 @@
 package ss4_object_class;
 
 public class Student {
+    public static void main(String[] args) {
+        System.out.println("-------------main run-----------");
+    }
 
     // khai báo thuộc tính, biến của đối tượng ( instance), biến toàn cục (global)
     private int id;
     public String name;
     private float score;
 
+
     public static String school;
 
     static {
-        System.out.println("gán giá trị cho biến satic");
+        System.out.println("-------gán giá trị cho biến satic-        ");
         // xử lý phức tạp
         school = "BK";
         // khối static để thay đổi hoặc khởi tạo giá trị ban đầu cho biến static
