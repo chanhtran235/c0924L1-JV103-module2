@@ -1,0 +1,49 @@
+package ss8_mvc.controller;
+
+import ss8_mvc.model.Student;
+import ss8_mvc.service.StudentService;
+
+import java.util.Scanner;
+
+public class StudentController {
+    private StudentService studentService = new StudentService();// has-a
+
+    public void displayStudentMenu() {
+        Scanner scanner = new Scanner(System.in);
+        boolean flag= true;
+        while (flag) {
+            System.out.println("Chọn chức năng \n" +
+                    "1. Xem danh sách\n" +
+                    "2. Thêm mới\n" +
+                    "3.  Xoá \n" +
+                    "4. Thoát");
+            int choose = Integer.parseInt(scanner.nextLine());
+            switch (choose) {
+                case 1:
+                   Student[] students =  studentService.findAll();
+                    for (Student student: students) {
+                        if (student!=null){
+                            System.out.println(student);
+                        }
+
+                    }
+                    break;
+                case 2:
+                    System.out.println("nhập id");
+                    int id = Integer.parseInt(scanner.nextLine());
+                    System.out.println("nhập tên");
+                    String name = scanner.nextLine();
+
+                    Student student = new Student(id,name);
+                    studentService.addStudent(student);
+                    break;
+                case 3:
+                    System.out.println("------------- xoá ----------------------");
+                    break;
+                case 4:
+                    System.out.println("-------- Kết thúc----------------------");
+                    flag = false;
+            }
+        }
+    }
+}

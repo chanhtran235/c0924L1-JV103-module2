@@ -5,9 +5,10 @@ import java.util.Scanner;
 public class Run {
 
     public static void main(String[] args) {
+        final int DISPLAY =1;
+        final int ADD =2;
 
         Student[] students = new Student[10];
-
         Scanner scanner = new Scanner(System.in);
         while (true){
             System.out.println("Chọn chức năng \n" +
@@ -17,8 +18,7 @@ public class Run {
                     "4. Thoát");
             int choose = Integer.parseInt(scanner.nextLine());
             switch (choose){
-                case 1:
-                    // code hiển thị danh sách
+                case DISPLAY:
                     System.out.println("--------------Hiển thị danh sách-------");
                     for (int i = 0; i <students.length ; i++) {
                         if (students[i]!=null){
@@ -26,10 +26,8 @@ public class Run {
                         }
 
                     }
-
                     break;
-                case 2 :
-                    // code thêm mới
+                case ADD :
                     System.out.println("---------------Thêm mới----------");
                     System.out.println("nhập id");
                     int id = Integer.parseInt(scanner.nextLine());
