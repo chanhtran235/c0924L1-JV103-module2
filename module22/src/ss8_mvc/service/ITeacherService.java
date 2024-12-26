@@ -4,5 +4,5 @@ import ss8_mvc.model.Teacher;
 
 public interface ITeacherService {
     Teacher[] findAll();
-    void addTeacher(Teacher teacher);
+    void add(Teacher teacher);
 }

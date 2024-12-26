@@ -10,7 +10,7 @@ public class TeacherService implements ITeacherService{
     }
 
     @Override
-    public void addTeacher(Teacher teacher) {
+    public void add(Teacher teacher) {
 
     }
 }

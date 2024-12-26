@@ -1,6 +1,5 @@
 package ss8_mvc.controller;
 
-import ss8_mvc.model.Student;
 import ss8_mvc.model.Teacher;
 import ss8_mvc.service.ITeacherService;
 import ss8_mvc.service.TeacherService;
@@ -27,7 +26,7 @@ public class TeacherController {
                 case 2:
                     // thêm ới
                     Teacher teacher = new Teacher();
-                    teacherService.addTeacher(teacher);
+                    teacherService.add(teacher);
                     break;
                 case 3:
                     System.out.println("------------- xoá ----------------------");

@@ -3,6 +3,7 @@ package ss8_mvc.controller;
 import ss8_mvc.model.Student;
 import ss8_mvc.service.StudentService;
 
+import java.util.List;
 import java.util.Scanner;
 
 public class StudentController {
@@ -10,7 +11,7 @@ public class StudentController {
 
     public void displayStudentMenu() {
         Scanner scanner = new Scanner(System.in);
-        boolean flag= true;
+        boolean flag = true;
         while (flag) {
             System.out.println("Chọn chức năng \n" +
                     "1. Xem danh sách\n" +
@@ -20,12 +21,9 @@ public class StudentController {
             int choose = Integer.parseInt(scanner.nextLine());
             switch (choose) {
                 case 1:
-                   Student[] students =  studentService.findAll();
-                    for (Student student: students) {
-                        if (student!=null){
-                            System.out.println(student);
-                        }
-
+                    List<Student> students = studentService.findAll();
+                    for (Student student : students) {
+                        System.out.println(student);
                     }
                     break;
                 case 2:
@@ -33,9 +31,8 @@ public class StudentController {
                     int id = Integer.parseInt(scanner.nextLine());
                     System.out.println("nhập tên");
                     String name = scanner.nextLine();
-
-                    Student student = new Student(id,name);
-                    studentService.addStudent(student);
+                    Student student = new Student(id, name);
+                    studentService.add(student);
                     break;
                 case 3:
                     System.out.println("------------- xoá ----------------------");
@@ -46,4 +43,5 @@ public class StudentController {
             }
         }
     }
+
 }
