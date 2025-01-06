@@ -38,6 +38,9 @@ public class Student  implements Comparable<Student>{
                 ", name='" + name + '\'' +
                 '}';
     }
+    public String getInfoToFile(){
+        return this.id +","+ this.name;
+    }
 
     @Override
     public int compareTo(Student s) {
