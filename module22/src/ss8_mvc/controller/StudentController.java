@@ -17,7 +17,7 @@ public class StudentController {
                     "1. Xem danh sách\n" +
                     "2. Thêm mới\n" +
                     "3.  Xoá \n" +
-                    "4. Thoát");
+                    "4. Quay lại menu chính");
             int choose = Integer.parseInt(scanner.nextLine());
             switch (choose) {
                 case 1:
@@ -31,7 +31,9 @@ public class StudentController {
                     int id = Integer.parseInt(scanner.nextLine());
                     System.out.println("nhập tên");
                     String name = scanner.nextLine();
-                    Student student = new Student(id, name);
+                    System.out.println("nhập địa chỉ");
+                    String address = scanner.nextLine();
+                    Student student = new Student(id, name,address);
                     studentService.add(student);
                     break;
                 case 3:

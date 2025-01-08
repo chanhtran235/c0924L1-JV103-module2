@@ -1,45 +1,47 @@
 package ss8_mvc.model;
 
+import java.io.Serializable;
 import java.util.Comparator;
 import java.util.Objects;
 
-public class Student  implements Comparable<Student>{
-    private int id;
-    private String name;
-
+public class Student extends Person  implements Comparable<Student> {
+    public static String school ="CODEGYM";
+    private  transient String address;
     public Student() {
     }
 
-    public Student(int id, String name) {
-        this.id = id;
-        this.name = name;
+    public Student(int id, String name,String address) {
+        super(id, name);
+        this.address = address;
     }
 
-    public int getId() {
-        return id;
+    public static String getSchool() {
+        return school;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public static void setSchool(String school) {
+        Student.school = school;
     }
 
-    public String getName() {
-        return name;
+    public String getAddress() {
+        return address;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setAddress(String address) {
+        this.address = address;
     }
 
     @Override
     public String toString() {
         return "Student{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
+                "id=" + super.getId() +
+                ", name='" + super.getName() + '\'' +
+                ", address='" + this.getAddress() + '\'' +
+                ", school='" + school + '\'' +
                 '}';
     }
     public String getInfoToFile(){
-        return this.id +","+ this.name;
+        return super.getId() +","+ super.getName();
     }
 
     @Override
@@ -55,12 +57,12 @@ public class Student  implements Comparable<Student>{
     @Override
     public boolean equals(Object object) {
         Student student = (Student)object;
-        return this.id == student.id;
+        return super.getId() == student.getId();
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id);
+        return Objects.hash(super.getId());
     }
     //    @Override
 //    public int compareTo(Student s) {

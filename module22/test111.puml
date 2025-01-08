@@ -1,0 +1,417 @@
+@startuml
+class ss1_introduction_to_java.bai_tap.Demo {
++ {static} void main(String[])
+}
+
+interface ss8_mvc.service.IService {
+~ List<T> findAll()
+~ void add(T)
+~ boolean deleteById(int)
+}
+
+class ss5_static.Main {
++ {static} void main(String[])
+}
+
+class ss14_sort.DemoSort {
++ {static} void main(String[])
++ {static} void bubbleSort(int[])
++ {static} void selectionSort(int[])
++ {static} void insertionSort(int[])
+}
+
+class ss9_test.Calculator {
++ {static} void main(String[])
++ int sum(int,int)
+}
+
+class ss12_set_map.Demo {
++ {static} void main(String[])
+}
+
+class ss6_inheritance.Instructor {
++ void howToGo()
++ void attendance()
+}
+
+class ss4_object_class.Student {
+- int id
++ String name
+- float score
++ {static} String school
++ {static} void main(String[])
++ int getId()
++ void setId(int)
++ String getName()
++ void setName(String)
++ float getScore()
++ void setScore(float)
++ String toString()
+}
+
+
+class ss8_mvc.controller.TeacherController {
+- ITeacherService teacherService
++ void displayTeachMenu()
+}
+
+
+class ss4_object_class.Employee {
++ void getInfo()
+}
+
+class ss8_mvc.model.Teacher {
+- int id
+- String name
+}
+
+class ss6_inheritance.Run {
++ {static} void main(String[])
+}
+
+interface ss8_mvc.service.IStudentService {
+}
+class ss8_mvc.util.ReadAndWriteFile {
++ {static} void writeFile(String,List<String>,boolean)
++ {static} List<String> readFile(String)
+}
+
+class ss4_object_class.Test {
++ {static} void main(String[])
+}
+
+class ss3_array.demo_tham_tri_tham_chieu.DemoThamTriThamChieu {
++ {static} void main(String[])
++ {static} void changeArray(int[])
+}
+
+class ss8_mvc.controller.StudentController {
+- StudentService studentService
++ void displayStudentMenu()
+}
+
+
+class ss3_array.thuc_hanh.DemoArray {
++ {static} void main(String[])
+}
+
+interface ss8_mvc.service.ITeacherService {
+~ Teacher[] findAll()
+~ void add(Teacher)
+}
+
+abstract class ss6_inheritance.Person {
+- int id
+- String name
+- int age
++ int getId()
++ void setId(int)
++ String getName()
++ void setName(String)
++ int getAge()
++ void setAge(int)
++ {abstract}void howToGo()
++ String toString()
+}
+
+
+interface ss7.inteface.Resizeable {
+~ void resize(double)
+}
+
+class ss3_array.bai_tap.Main {
++ {static} void main(String[])
+}
+
+interface ss6_inheritance.IGame {
+~ void organizeGame()
+}
+
+class ss8_mvc.view.View {
++ {static} void main(String[])
+}
+
+interface ss6_inheritance.Itraining {
+~ {static} int i
+~ void attendance()
+}
+
+
+class ss4_object_class.Calculator {
+- {static} int sum(int,int)
++ {static} int chuVi(int,int)
+}
+
+class ss7.Square {
+- double side
++ double getSide()
++ void setSide(double)
++ void resize(double)
++ void howToColor()
++ String toString()
++ double getPerimeter()
+}
+
+
+class ss6_inheritance.bai_tap.Point {
+- float x
+- float y
++ float getX()
++ void setX(float)
++ float getY()
++ void setY(float)
++ void setXY(float,float)
++ float[] getXY()
++ String toString()
+}
+
+
+class ss15_exception.DemoException {
++ {static} void main(String[])
++ {static} void method1()
++ {static} void method2(String)
++ {static} boolean checkAge(int)
+}
+
+class ss6_inheritance.Student {
+- int score
+- Classes classes
++ void howToGo()
++ void study(String)
++ String toString()
++ boolean equals(Object)
+}
+
+
+class ss6_inheritance.bai_tap.MovablePoint {
+- float xSpeed
+- float ySpeed
++ float getxSpeed()
++ void setxSpeed(float)
++ float getySpeed()
++ void setySpeed(float)
++ void setSpeed(float,float)
++ float[] getSpeeds()
++ MovablePoint move()
++ String toString()
+}
+
+
+class ss1_introduction_to_java.thuc_hanh.DemoJava {
++ {static} void main(String[])
+}
+
+class ss13_search.Demo {
++ {static} void main(String[])
++ {static} int linearSearch(int[],int)
++ {static} int binarySearch(int[],int)
+}
+
+class ss1_introduction_to_java.bai_tap.Demo1 {
+~ int i
++ {static} void main(String[])
+}
+
+
+class ss8_mvc.model.CompaByIdAndName {
++ int compare(Student,Student)
+}
+
+class ss6_inheritance.Ministry {
++ void howToGo()
++ void attendance()
++ void organizeGame()
+}
+
+class ss7.ShapeTest {
++ {static} void main(String[])
+}
+
+class ss4_object_class.bai_tap.stopwatch.StopWatch {
+- long startTime
+- long endTime
++ long getStartTime()
++ long getEndTime()
++ void start()
++ void stop()
++ long getElapsedTime()
+}
+
+
+class ss11_generic_stack_queue.Box {
+- T t
++ T getT()
++ void setT(T)
+}
+
+
+abstract class ss6_inheritance.Employee {
+- int salary
++ int getBonous()
+}
+
+
+class ss6_inheritance.bai_tap.Run {
++ {static} void main(String[])
+}
+
+class ss7.Rectangle {
+- double width
+- double length
++ double getWidth()
++ void setWidth(double)
++ double getLength()
++ void setLength(double)
++ double getArea()
++ double getPerimeter()
++ String toString()
++ void resize(double)
+}
+
+
+class ss8_mvc.service.StudentService {
+- String STUDENT_FILE
+- boolean APPEND
+- boolean NOT_APPEND
++ List<Student> findAll()
++ void add(Student)
++ boolean deleteById(int)
+}
+
+
+class ss6_inheritance.Seller {
++ void howToGo()
+}
+
+class ss1_introduction_to_java.MyStack {
++ {static} void main(String[])
+}
+
+class ss2_loop.thuc_hanh.DemoMenu {
++ {static} void main(String[])
+}
+
+class ss6_inheritance.Classes {
+- int id
+- String name
+}
+
+class ss4_object_class.bai_tap.stopwatch.Main {
++ {static} void main(String[])
+}
+
+class ss15_exception.MyAgeException {
+}
+class ss7.Circle {
+- double radius
++ double getRadius()
++ void setRadius(double)
++ double getArea()
++ String toString()
++ void resize(double)
++ double getPerimeter()
+}
+
+
+abstract class ss7.Shape {
+- String color
+- boolean filled
++ String getColor()
++ void setColor(String)
++ boolean isFilled()
++ void setFilled(boolean)
++ {abstract}double getPerimeter()
++ String toString()
+}
+
+
+class ss8_mvc.service.TeacherService {
++ Teacher[] findAll()
++ void add(Teacher)
+}
+
+class ss10.Main {
++ {static} void main(String[])
+}
+
+class ss11_generic_stack_queue.Demo {
++ {static} void main(String[])
+}
+
+class ss4_object_class.Run {
++ {static} void main(String[])
+}
+
+class ss5_static.Person {
+# int id
+# String name
+}
+
+interface ss6_inheritance.ITotal {
+}
+class ss3_array.thuc_hanh.DemoArray2 {
++ {static} void main(String[])
+}
+
+class ss8_mvc.model.CompaByName {
++ int compare(Student,Student)
+}
+
+interface ss7.inteface.Colorable {
+~ void howToColor()
+}
+
+class ss8_mvc.controller.Main {
++ {static} void main(String[])
+}
+
+class ss3_array.bai_tap.DemoMethod {
++ {static} void main(String[])
++ {static} void showMessage(String)
++ void showMessage2(String)
++ void showMessage2()
++ void showMessage2(int)
++ {static} double sum(int,double)
++ {static} double sum(double,int)
+}
+
+class ss8_mvc.model.Student {
+- int id
+- String name
++ int getId()
++ void setId(int)
++ String getName()
++ void setName(String)
++ String toString()
++ String getInfoToFile()
++ int compareTo(Student)
++ boolean equals(Object)
++ int hashCode()
+}
+
+
+
+
+ss6_inheritance.Itraining <|.. ss6_inheritance.Instructor
+ss6_inheritance.Employee <|-- ss6_inheritance.Instructor
+ss5_static.Person <|-- ss4_object_class.Employee
+ss8_mvc.service.IService <|-- ss8_mvc.service.IStudentService
+ss7.inteface.Colorable <|.. ss7.Square
+ss7.Shape <|-- ss7.Square
+ss6_inheritance.Person <|-- ss6_inheritance.Student
+ss6_inheritance.bai_tap.Point <|-- ss6_inheritance.bai_tap.MovablePoint
+java.util.Comparator <|.. ss8_mvc.model.CompaByIdAndName
+ss6_inheritance.Employee <|-- ss6_inheritance.Ministry
+ss6_inheritance.Person <|-- ss6_inheritance.Employee
+ss7.Shape <|-- ss7.Rectangle
+ss8_mvc.service.IStudentService <|.. ss8_mvc.service.StudentService
+ss6_inheritance.Employee <|-- ss6_inheritance.Seller
+ss15_exception.Exception <|-- ss15_exception.MyAgeException
+ss7.Shape <|-- ss7.Circle
+ss7.inteface.Resizeable <|.. ss7.Shape
+ss8_mvc.service.ITeacherService <|.. ss8_mvc.service.TeacherService
+ss6_inheritance.Itraining <|-- ss6_inheritance.ITotal
+ss6_inheritance.IGame <|-- ss6_inheritance.ITotal
+java.util.Comparator <|.. ss8_mvc.model.CompaByName
+ss8_mvc.model.Comparable <|.. ss8_mvc.model.Student
+@enduml

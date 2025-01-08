@@ -35,18 +35,18 @@ public class Main {
 //        for (int i = 0; i <arrayList.size() ; i++) {
 //            System.out.println(arrayList.get(i));
 //        }
-       Student student1 = new Student();
-        Student student = new Student(1,"chánh");
-        LinkedList<Student> studentList = new LinkedList<>();
-         studentList.add(student);
-         studentList.add(new Student());
-        for (int i = 0; i <studentList.size() ; i++) {
-            System.out.println(studentList.get(i));
-        }
-
-        //
-        List<Student> students = new ArrayList<>();//
-        students.add(new Student());
+//       Student student1 = new Student();
+//        Student student = new Student(1,"chánh");
+//        LinkedList<Student> studentList = new LinkedList<>();
+//         studentList.add(student);
+//         studentList.add(new Student());
+//        for (int i = 0; i <studentList.size() ; i++) {
+//            System.out.println(studentList.get(i));
+//        }
+//
+//        //
+//        List<Student> students = new ArrayList<>();//
+//        students.add(new Student());
 
     }
 
