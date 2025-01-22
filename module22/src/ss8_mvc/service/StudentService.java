@@ -20,30 +20,30 @@ public class StudentService implements IStudentService {
     public List<Student> findAll() {
         List<Student> studentList = new ArrayList<>();
         // đọc file
-//        List<String> stringList = ReadAndWriteFile.readFile(STUDENT_FILE);
-//        //  chuyển dữ liệu stringList sang studentList;
-//        String [] array;
-//        for (int i = 0; i <stringList.size() ; i++) {
-//            array = stringList.get(i).split(",");
-//            Student student = new Student(Integer.parseInt(array[0]),array[1]);
-//            studentList.add(student);
-//        }
+        List<String> stringList = ReadAndWriteFile.readFile(STUDENT_FILE);
+        //  chuyển dữ liệu stringList sang studentList;
+        String [] array;
+        for (int i = 0; i <stringList.size() ; i++) {
+            array = stringList.get(i).split(",");
+            Student student = new Student(Integer.parseInt(array[0]),array[1],array[2]);
+            studentList.add(student);
+        }
 
         // đọc file nhị phân
-        studentList = ReadAndWriteFile.readListObjectFromDat(STUDENT_DAT_FILE);
+//        studentList = ReadAndWriteFile.readListObjectFromDat(STUDENT_DAT_FILE);
         return studentList;
     }
 
     @Override
     public void add(Student student) {
         // character
-//        List<String> stringList = new ArrayList<>();
-//        stringList.add(student.getInfoToFile());
-//        ReadAndWriteFile.writeFile(STUDENT_FILE,stringList,APPEND);
+        List<String> stringList = new ArrayList<>();
+        stringList.add(student.getInfoToFile());
+        ReadAndWriteFile.writeFile(STUDENT_FILE,stringList,APPEND);
         // binary
-        List<Student> studentList = ReadAndWriteFile.readListObjectFromDat(STUDENT_DAT_FILE);
-        studentList.add(student);
-        ReadAndWriteFile.writeListSObjectToDat(STUDENT_DAT_FILE,studentList);
+//        List<Student> studentList = ReadAndWriteFile.readListObjectFromDat(STUDENT_DAT_FILE);
+//        studentList.add(student);
+//        ReadAndWriteFile.writeListSObjectToDat(STUDENT_DAT_FILE,studentList);
     }
 
     @Override
@@ -59,16 +59,16 @@ public class StudentService implements IStudentService {
         }
         // nếu tìm thấy thì update file
         if (check){
-            // sử dụng character
-            // chuyển studentlist => stringList
-//            List<String> stringList = new ArrayList<>();
-//            for (Student s: studentList) {
-//                stringList.add(s.getInfoToFile());
-//            }
-//            ReadAndWriteFile.writeFile(STUDENT_FILE,stringList,NOT_APPEND);
-//
+//             sử dụng character
+//             chuyển studentlist => stringList
+            List<String> stringList = new ArrayList<>();
+            for (Student s: studentList) {
+                stringList.add(s.getInfoToFile());
+            }
+            ReadAndWriteFile.writeFile(STUDENT_FILE,stringList,NOT_APPEND);
+
             // sử dụng binary
-            ReadAndWriteFile.writeListSObjectToDat(STUDENT_DAT_FILE,studentList);
+//            ReadAndWriteFile.writeListSObjectToDat(STUDENT_DAT_FILE,studentList);
         }
         return check;
     }

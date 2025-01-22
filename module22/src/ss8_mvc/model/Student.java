@@ -6,7 +6,7 @@ import java.util.Objects;
 
 public class Student extends Person  implements Comparable<Student> {
     public static String school ="CODEGYM";
-    private  transient String address;
+    private  String address;
     public Student() {
     }
 
@@ -41,7 +41,7 @@ public class Student extends Person  implements Comparable<Student> {
                 '}';
     }
     public String getInfoToFile(){
-        return super.getId() +","+ super.getName();
+        return super.getId() +","+ super.getName() +","+this.getAddress();
     }
 
     @Override
